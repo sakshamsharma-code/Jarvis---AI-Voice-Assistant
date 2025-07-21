@@ -227,11 +227,9 @@ def processCommand(command):
 
 
 # -------------- AI COMMAND HANDLER ----------------
-    # -------------- AI COMMAND HANDLER ----------------
     else:
         response = aiProcess(command)
         speak(response)
-        return command, response  # <-- Add this
 
 
 
