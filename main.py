@@ -176,7 +176,7 @@ def processCommand(command):
 # -------------- NEWS HANDLER ----------------
     elif "news" in command:
         try:
-            r = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&apiKey={os.getenv('NEWS_API_KEY')}")
+            r = requests.get(f"https://newsapi.org/v2/top-headlines?country=us&apiKey={os.getenv('NEWS_API_KEY')}")
             if r.status_code == 200:
                 articles = r.json().get("articles", [])
                 for article in articles[:5]:  # Limit to top 5 headlines
